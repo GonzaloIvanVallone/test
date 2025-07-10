@@ -8,4 +8,12 @@ Entre las desventajas mas notables se encuentran la baja resistencia a los fallo
 Estas desventajas, entre otras, dieron raiz al nacimiento de la arquitectura de Microservicios.
 
 ## Arquitectura de Microservicios
+Es un enfoque modular en el cual se busca dividir el software a desarrollar en pequeños modulos llamados servicios. Tendremos el mismo contenido que una aplicacion monolitica con la diferencia de que cada tarea o rol especifico sera realizado por un microservicio particular, reduciendo asi la complejidad y los conflictos.  
+Estos microservicios cumplen una funcion unica y son independientes, esto no quiere decir que no se necesiten entre ellos sino que pueden desarrollarse y desplegarse sin depender entre si, pueden utilizar un lenguaje o framework distinto y, en caso de fallar, no afectan a los demas modulos. De esta forma se evitan los dos problemas mas notables de la arquitectura monolitica mensionados previamente, la baja resistencia a fallos y la interdependencia y se suman algunas fortalezas, como la capacidad de usar un stack tecnologico a conveniencia.  
+Este tipo de arquitectura es recomendada cuando se busca construir software complejo y grande manteniendo escalabilidad.  
+Entonces, repasemos algunas caracteristicas importantes de los microservicios:
+  - Cada servicio se concentra en una tarea o rol puntual
+  - Cada servicio es autonomo 
+  - Cada servicio usa su propia DB
+  - Se comunican entre si y el fallo de alguno de ellos no afecta a los demas
 
