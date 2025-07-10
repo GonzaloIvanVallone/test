@@ -17,3 +17,16 @@ Entonces, repasemos algunas caracteristicas importantes de los microservicios:
   - Cada servicio usa su propia DB
   - Se comunican entre si y el fallo de alguno de ellos no afecta a los demas
 
+## Componentes de la Arquitectura de Microservicios
+Para desarrollar de esta forma, ademas del codigo y las buenas practicas, se necesitan patrones y herramientas que ayuden a mantener la comunicacion, la seguridad, la eficiencia, etc.   
+Entre los componentes mas claves que existen para lograr estos objetivos se encuentran:
+  - API Gateway
+  - Load Balancer
+  - Server Discovery
+  - Circuit Breaker
+  - Auth Server/Layer
+  - Containerization
+    
+Es la division modular junto con estos componentes lo que se necesita para crear un buen sistema de microservicios.
+
+## API Gateway
