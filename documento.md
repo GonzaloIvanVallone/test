@@ -7,7 +7,7 @@ Hace referencia a una forma de desarrollar software en donde este está construi
 Entre las desventajas mas notables se encuentran la baja resistencia a los fallos (un fallo en un componente afecta a la aplicacion en su totalidad) y la interdependencia (el cambio en un componente puede requerir cambios en clases adyacentes colateralamente).  
 Estas desventajas, entre otras, dieron raiz al nacimiento de la arquitectura de Microservicios.
 
-![staywithme](https://i0.wp.com/res.cloudinary.com/salesforcecodex-stories/image/upload/v1683382123/Posts/Monolithic_Architecture_SalesforceCodex_iyn8jj.png?w=1170&ssl=1)
+![staywithme](https://miro.medium.com/v2/resize:fit:1400/1*TRmj8lWyzCufEGjxCONAog.jpeg)
 
 ## Arquitectura de Microservicios
 Es un enfoque modular en el cual se busca dividir el software a desarrollar en pequeños modulos llamados servicios. Tendremos el mismo contenido que una aplicacion monolitica con la diferencia de que cada tarea o rol especifico sera realizado por un microservicio particular, reduciendo asi la complejidad y los conflictos.  
