@@ -16,6 +16,7 @@ Entonces, repasemos algunas caracteristicas importantes de los microservicios:
   - Cada servicio es autonomo 
   - Cada servicio usa su propia DB
   - Se comunican entre si y el fallo de alguno de ellos no afecta a los demas
+  - De ser necesario, pueden crearse multiples instancias del mismo microservicio (mucho trafico de solicitudes o solicitudes complejas) 
 
 ## Componentes de la Arquitectura de Microservicios
 Para desarrollar de esta forma, ademas del codigo y las buenas practicas, se necesitan patrones y herramientas que ayuden a mantener la comunicacion, la seguridad, la eficiencia, etc.   
@@ -33,4 +34,9 @@ Es la division modular junto con estos componentes lo que se necesita para crear
 
 ## API Gateway
 Es un microservicio especial, dedicado a una funcion esencial: maneja el trafico que ingresa a nuestra app y la delega a nuestros microservicios. Es el punto de entrada a los sistemas de software que implementan arquitectura de microservicios.  
-La API Gateway recibirá cada una de las solicitudes HTTP provenientes del Load Balancer y las redirigirá al microservicio correspondiente basado en el path recibido en la solicitud.
+La API Gateway recibirá cada una de las solicitudes HTTP provenientes del Load Balancer y las redirigirá al microservicio correspondiente basado en el path recibido en la solicitud. Al igual que el load balancer, aplica algoritmos para balancear el trafico entre distintas instancias de un mismo microservicio para asi evitar inanicion.
+Para aplicaciones en Java utilizamos Spring Cloud Gateway. 
+## Auth Server
+## Server Discovery
+## Circuit Breaker
+## Containerization
