@@ -7,6 +7,7 @@ Hace referencia a una forma de desarrollar software en donde este está construi
 Entre las desventajas mas notables se encuentran la baja resistencia a los fallos (un fallo en un componente afecta a la aplicacion en su totalidad) y la interdependencia (el cambio en un componente puede requerir cambios en clases adyacentes colateralamente).  
 Estas desventajas, entre otras, dieron raiz al nacimiento de la arquitectura de Microservicios.
 
+
 ![staywithme](https://miro.medium.com/v2/resize:fit:1400/1*TRmj8lWyzCufEGjxCONAog.jpeg)
 
 ## Arquitectura de Microservicios
