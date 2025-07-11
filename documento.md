@@ -20,8 +20,8 @@ Entonces, repasemos algunas caracteristicas importantes de los microservicios:
 ## Componentes de la Arquitectura de Microservicios
 Para desarrollar de esta forma, ademas del codigo y las buenas practicas, se necesitan patrones y herramientas que ayuden a mantener la comunicacion, la seguridad, la eficiencia, etc.   
 Entre los componentes mas claves que existen para lograr estos objetivos se encuentran:
-  - API Gateway
   - Load Balancer
+  - API Gateway
   - Server Discovery
   - Circuit Breaker
   - Auth Server/Layer
@@ -29,4 +29,8 @@ Entre los componentes mas claves que existen para lograr estos objetivos se encu
     
 Es la division modular junto con estos componentes lo que se necesita para crear un buen sistema de microservicios.
 
+## Load Balancer
+
 ## API Gateway
+Es un microservicio especial, dedicado a una funcion esencial: maneja el trafico que ingresa a nuestra app y la delega a nuestros microservicios. Es el punto de entrada a los sistemas de software que implementan arquitectura de microservicios.  
+La API Gateway recibirá cada una de las solicitudes HTTP provenientes del Load Balancer y las redirigirá al microservicio correspondiente basado en el path recibido en la solicitud.
