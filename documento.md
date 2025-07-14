@@ -8,7 +8,7 @@ Entre las desventajas mas notables se encuentran la baja resistencia a los fallo
 Estas desventajas, entre otras, dieron raiz al nacimiento de la arquitectura de Microservicios.
 
 
-![staywithme](https://miro.medium.com/v2/resize:fit:1400/1*TRmj8lWyzCufEGjxCONAog.jpeg)
+![picture1](https://miro.medium.com/v2/resize:fit:1400/1*TRmj8lWyzCufEGjxCONAog.jpeg)
 
 ## Arquitectura de Microservicios
 Es un enfoque modular en el cual se busca dividir el software a desarrollar en pequeños modulos llamados servicios. Tendremos el mismo contenido que una aplicacion monolitica con la diferencia de que cada tarea o rol especifico sera realizado por un microservicio particular, reduciendo asi la complejidad y los conflictos.  
@@ -32,14 +32,24 @@ Entre los componentes mas claves que existen para lograr estos objetivos se encu
   - Containerization
     
 Es la division modular junto con estos componentes lo que se necesita para crear un buen sistema de microservicios.
+![picture2](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*uuE7lhG6R4zO53PV_apg2g.png)
 
 ## Load Balancer
+Es el punto de contacto entre el navegador del usuario y nuestro servicio web. Se encarga de distribuir las solicitudes entrantes hacia nuestra API Gateway y utiliza algoritmos para balancear el trafico entre distintas instancias de esta. 
 
 ## API Gateway
 Es un microservicio especial, dedicado a una funcion esencial: maneja el trafico que ingresa a nuestra app y la delega a nuestros microservicios. Es el punto de entrada a los sistemas de software que implementan arquitectura de microservicios.  
 La API Gateway recibirá cada una de las solicitudes HTTP provenientes del Load Balancer y las redirigirá al microservicio correspondiente basado en el path recibido en la solicitud. Al igual que el load balancer, aplica algoritmos para balancear el trafico entre distintas instancias de un mismo microservicio para asi evitar inanicion.
 Para aplicaciones en Java utilizamos Spring Cloud Gateway. 
+
 ## Auth Server
+Es el microservicio responsable de gestionar la autorizacion y autenticacion de los usuarios. Asegura que solo aquellos con credenciales validas puedan acceder a recursos protegidos.
+
 ## Server Discovery
+Es la herramienta que sirve para que cada uno de nuestros microservicios pueda encontrarse entre si. Permite registrar las instancias disponibles de nuestros microservicios y donde estan ubicadas. Cuando la API Gateway necesita comunicarse con un microservicio, consulta esta lista y envia la solicitud correspondiente.
+
 ## Circuit Breaker
+Es un patron de diseño utilizado para fortalezar la resistencia a fallos de nuestra aplicacion, su función es detectar cuando un microservicio esta fallando e interrumpir temporalmente el flujo hacia ese servicio. En estos casos el Load Balancer redirigira las solicitudes hacia otra instancia de dicho microservicio, en caso de ser posible. 
+
 ## Containerization
+Permite empaquetar cada microservicio con todas sus dependencias, librerias y configuraciones necesarias para que pueda ejecutarse en cualquier entorno. Adicionalmente permite ejecutar multiples instancias de nuestros microservicios.
